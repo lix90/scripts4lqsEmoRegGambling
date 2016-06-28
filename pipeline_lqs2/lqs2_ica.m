@@ -2,8 +2,9 @@ clear, clc, close all
 % pipeline for preprocessing ica
 
 baseDir = '';
-inputTag = '';
-outputTag = '';
+eeglabPath = '';
+inputTag = 'pre';
+outputTag = 'ica';
 fileExtension = 'set';
 prefixPosition = 1;
 offlineRef = {'TP9', 'TP10'};

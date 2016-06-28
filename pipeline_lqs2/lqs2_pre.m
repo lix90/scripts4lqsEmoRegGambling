@@ -2,8 +2,9 @@ clear, clc, close all
 
 % pipeline for pre-ica preprocessing
 baseDir = '';
-inputTag = '';
-outputTag = '';
+eeglabPath = '';
+inputTag = 'merge';
+outputTag = 'pre';
 fileExtension = 'eeg';
 prefixPosition = 1;
 brainTemplate = 'Spherical';
@@ -24,7 +25,7 @@ rmChans = {'HEOL', 'HEOR', 'HEOG', 'HEO', ...
            'VEOD', 'VEO', 'VEOU', 'VEOG', ...
            'M1', 'M2', 'TP9', 'TP10'};
 
-setEEGLAB;
+setEEGLAB(eeglabPath);
 
 % for i = 1:numel(id)
 for i = numel(id)

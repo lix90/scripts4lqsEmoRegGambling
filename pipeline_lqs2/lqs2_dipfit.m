@@ -2,6 +2,7 @@ clear, clc, close all
 
 %% parameters
 baseDir = '';
+eeglabPath = '';
 inputTag = 'ica';
 outputTag = 'dipfit';
 rvDipoleEstimate = 1;
@@ -18,7 +19,7 @@ if ~exist(outputDir, 'dir'); mkdir(outputDir); end
 
 setMatlabPool(poolSize);
 
-setEEGLAB;
+setEEGLAB(eeglabPath);
 
 parfor i = 1:numel(id)
 

@@ -2,7 +2,8 @@
 clear, clc, close
 
 baseDir = '';
-inputTag = '';
+eeglabPath = '';
+inputTag = 'epoch';
 outputTag = 'clean';
 baseline = [-200, 0];
 rightRESP = [];
@@ -21,7 +22,7 @@ if exist('poolSize', 'var') && ~isempty(poolSize)
     setMatlabPool(poolSize)
 end
 
-setEEGLAB;
+setEEGLAB(eeglabPath);
 
 parfor i = 1:numel(id)
 
